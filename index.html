@@ -526,45 +526,55 @@
 
   /* ── ABOUT ── */
   .about {
+    padding: 96px 80px;
     background: var(--dark);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 100px;
+    gap: 72px;
     align-items: center;
   }
 
   .about-image-wrap {
     position: relative;
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .about-image-frame {
     width: 100%;
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/5;
     background: var(--charcoal);
     position: relative;
     overflow: hidden;
+    z-index: 1;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 18%;
+    filter: saturate(0.92) contrast(1.04) brightness(0.9);
+    transform: scale(1.01);
   }
 
   .about-image-frame::before {
     content: '';
     position: absolute;
     inset: 0;
+    z-index: 1;
     background: 
       linear-gradient(135deg, rgba(184,150,90,0.06) 0%, transparent 50%),
       radial-gradient(ellipse at 30% 70%, rgba(184,150,90,0.05) 0%, transparent 60%);
   }
 
-  /* Silhouette placeholder */
   .about-image-frame::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 85%;
-    background: linear-gradient(to top, var(--mid) 0%, rgba(46,46,46,0.3) 100%);
-    clip-path: polygon(20% 100%, 80% 100%, 90% 30%, 70% 15%, 50% 10%, 30% 15%, 10% 30%);
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,10,10,0.28), rgba(10,10,10,0.02) 44%, transparent 100%);
+    z-index: 1;
   }
 
   .about-corner-deco {
@@ -589,17 +599,19 @@
 
   .about-badge {
     position: absolute;
-    bottom: 32px;
-    right: -24px;
+    bottom: 24px;
+    right: -18px;
+    z-index: 3;
     background: var(--gold);
     color: var(--black);
-    padding: 20px 24px;
+    padding: 16px 20px;
     text-align: center;
+    box-shadow: 0 18px 36px rgba(0,0,0,0.28);
   }
 
   .about-badge-num {
     font-family: var(--serif);
-    font-size: 2.2rem;
+    font-size: 1.9rem;
     font-weight: 300;
     line-height: 1;
     display: block;
@@ -616,7 +628,7 @@
   }
 
   .about-content .section-body {
-    margin-bottom: 40px;
+    margin-bottom: 28px;
   }
 
   .credentials-list {
@@ -624,7 +636,7 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
-    margin-bottom: 48px;
+    margin-bottom: 36px;
   }
 
   .credentials-list li {
@@ -1206,7 +1218,7 @@
     .manifesto-band { flex-direction: column; padding: 48px 32px; gap: 32px; }
     .manifesto-divider { display: none; }
 
-    .about { grid-template-columns: 1fr; }
+    .about { padding: 72px 32px; grid-template-columns: 1fr; gap: 52px; }
     .areas-grid { grid-template-columns: 1fr; }
     .differentials { grid-template-columns: 1fr; gap: 48px; }
     .process-header { grid-template-columns: 1fr; gap: 32px; }
@@ -1241,6 +1253,10 @@
       gap: 18px;
       justify-content: space-between;
     }
+    .about { padding: 64px 20px; gap: 40px; }
+    .about-image-wrap { max-width: 300px; }
+    .about-badge { right: -10px; bottom: 18px; padding: 14px 16px; }
+    .about-badge-num { font-size: 1.6rem; }
     .hero-stat { padding-left: 14px; }
     .hero-stat-num { font-size: 1.7rem; }
     .hero-stat-label { font-size: 0.48rem; }
@@ -1351,7 +1367,9 @@
 <!-- ── ABOUT ── -->
 <section class="about" id="sobre">
   <div class="about-image-wrap reveal">
-    <div class="about-image-frame"></div>
+    <div class="about-image-frame">
+      <img src="Picture2.png" alt="Dr. Jailson Pontes" class="about-image">
+    </div>
     <div class="about-corner-deco"></div>
     <div class="about-corner-deco-b"></div>
     <div class="about-badge">
