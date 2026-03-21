@@ -659,6 +659,51 @@
     flex-shrink: 0;
   }
 
+  .institutional-panel {
+    margin: 0 0 40px;
+    padding: 28px 30px;
+    border: 1px solid rgba(184,150,90,0.16);
+    background: linear-gradient(160deg, rgba(255,255,255,0.02), rgba(184,150,90,0.03));
+  }
+
+  .institutional-title {
+    font-family: var(--sans);
+    font-size: 0.58rem;
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .institutional-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .institutional-list li {
+    font-family: var(--sans);
+    font-size: 0.64rem;
+    font-weight: 300;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    color: var(--silver);
+    position: relative;
+    padding-left: 22px;
+  }
+
+  .institutional-list li::before {
+    content: '';
+    position: absolute;
+    top: 0.8em;
+    left: 0;
+    width: 10px;
+    height: 1px;
+    background: var(--gold);
+  }
+
   /* ── PARTNERS ── */
   .partners {
     background: var(--black);
@@ -1320,6 +1365,7 @@
     .manifesto-divider { display: none; }
 
     .about { padding: 72px 32px; grid-template-columns: 1fr; gap: 52px; }
+    .institutional-panel { margin-bottom: 32px; padding: 24px; }
     .partners-grid { grid-template-columns: 1fr 1fr; }
     .areas-grid { grid-template-columns: 1fr; }
     .differentials { grid-template-columns: 1fr; gap: 48px; }
@@ -1359,6 +1405,8 @@
     .about-image-wrap { max-width: 300px; }
     .about-badge { right: -10px; bottom: 18px; padding: 14px 16px; }
     .about-badge-num { font-size: 1.6rem; }
+    .institutional-panel { padding: 20px 18px; }
+    .institutional-list li { font-size: 0.6rem; padding-left: 18px; }
     .partners { padding: 64px 20px; }
     .partners-header { margin-bottom: 34px; }
     .partners-grid { grid-template-columns: 1fr; gap: 16px; }
@@ -1505,6 +1553,15 @@
       <li>Experiência como CEO, Diretor de Tecnologia e Gerente Industrial</li>
       <li>Especialista em ambientes regulatórios de alta complexidade</li>
     </ul>
+    <div class="institutional-panel reveal">
+      <p class="institutional-title">Atuação Institucional</p>
+      <ul class="institutional-list">
+        <li>Membro da Comissão de Inteligência Artificial da OAB/AM.</li>
+        <li>Coordenação técnica geral em iniciativas de inteligência artificial na Comissão de IA da OAB/AM.</li>
+        <li>Conselheiro da Associação do Polo Digital de Manaus (APDM).</li>
+        <li>Vice-presidente fiscal da APDM.</li>
+      </ul>
+    </div>
     <a href="#contato" class="btn-primary">Agendar Consulta Estratégica</a>
   </div>
 </section>
