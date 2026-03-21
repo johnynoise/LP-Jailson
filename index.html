@@ -1347,74 +1347,625 @@
     margin: 32px 0;
   }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 1024px) {
-    nav { padding: 24px 32px; }
-    .nav-links { display: none; }
-    section { padding: 80px 32px; }
-
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 122px 32px 44px; }
-    .hero-right { height: 340px; }
-    .hero-title { font-size: clamp(2.35rem, 6vw, 3.6rem); }
-    .hero-trust-list { margin-bottom: 26px; }
-    .hero-portrait-wrap { inset: 40px 76px 144px 60px; border-radius: 24px; }
-    .hero-stat-block { gap: 32px; left: 32px; bottom: 40px; }
-
-    .manifesto-band { flex-direction: column; padding: 48px 32px; gap: 32px; }
-    .manifesto-divider { display: none; }
-
-    .about { padding: 72px 32px; grid-template-columns: 1fr; gap: 52px; }
-    .institutional-panel { margin-bottom: 32px; padding: 24px; }
-    .partners-grid { grid-template-columns: 1fr 1fr; }
-    .areas-grid { grid-template-columns: 1fr; }
-    .differentials { grid-template-columns: 1fr; gap: 48px; }
-    .process-header { grid-template-columns: 1fr; gap: 32px; }
-    .process-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
-    .process-steps::before { display: none; }
-    .contact-section { grid-template-columns: 1fr; }
-    .contact-left { padding: 60px 32px; }
-    .contact-right { padding: 60px 32px; }
-    footer { flex-direction: column; gap: 20px; text-align: center; }
-    .footer-oab { text-align: center; }
+  /* ── RESPONSIVE / MOBILE FIRST ── */
+  nav {
+    padding: 18px 16px;
+    align-items: flex-start;
   }
 
-  @media (max-width: 640px) {
-    nav { padding: 20px 20px; }
-    .nav-cta { display: none; }
-    .brand-mark-shell { width: 50px; height: 50px; border-radius: 16px; }
-    .brand-mark { width: 32px; height: 32px; }
-    .brand-name { font-size: 0.62rem; letter-spacing: 0.22em; }
-    .brand-tagline { font-size: 0.42rem; letter-spacing: 0.18em; }
-    .hero-left { padding: 112px 20px 36px; }
-    .hero-title { font-size: clamp(2rem, 9vw, 2.8rem); margin-bottom: 18px; }
-    .hero-sub { margin-bottom: 18px; }
-    .hero-proof { line-height: 1.8; }
-    .hero-trust-list { gap: 8px; margin-bottom: 22px; }
-    .hero-trust-pill { width: 100%; text-align: center; }
-    .hero-right { height: 320px; }
-    .hero-portrait-wrap { inset: 24px 46px 128px 34px; border-radius: 20px; }
-    .hero-stat-block {
-      left: 20px;
-      right: 20px;
-      bottom: 20px;
-      gap: 18px;
-      justify-content: space-between;
+  .nav-links,
+  .nav-cta,
+  .manifesto-divider,
+  .process-steps::before,
+  .philosophy::before {
+    display: none;
+  }
+
+  section {
+    padding: 64px 20px;
+  }
+
+  .brand-mark-shell {
+    width: 50px;
+    height: 50px;
+    border-radius: 16px;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-name {
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+  }
+
+  .brand-tagline {
+    font-size: 0.42rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left {
+    max-width: none;
+    padding: 112px 20px 36px;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    margin-bottom: 18px;
+  }
+
+  .hero-sub {
+    max-width: none;
+    margin-bottom: 18px;
+  }
+
+  .hero-trust-list {
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .hero-trust-pill {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .hero-right {
+    height: 320px;
+  }
+
+  .hero-portrait-wrap {
+    inset: 24px 46px 128px 34px;
+    border-radius: 20px;
+  }
+
+  .hero-stat-block {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    gap: 18px;
+    justify-content: space-between;
+  }
+
+  .hero-stat {
+    padding-left: 14px;
+  }
+
+  .hero-stat-num {
+    font-size: 1.7rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.48rem;
+  }
+
+  .manifesto-band {
+    padding: 40px 20px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .manifesto-meta,
+  .manifesto-meta p {
+    text-align: center;
+  }
+
+  .about {
+    padding: 64px 20px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-image-wrap {
+    max-width: 300px;
+  }
+
+  .about-badge {
+    right: -10px;
+    bottom: 18px;
+    padding: 14px 16px;
+  }
+
+  .about-badge-num {
+    font-size: 1.6rem;
+  }
+
+  .institutional-panel {
+    margin-bottom: 32px;
+    padding: 20px 18px;
+  }
+
+  .institutional-list li {
+    font-size: 0.6rem;
+    padding-left: 18px;
+  }
+
+  .partners-header {
+    margin-bottom: 34px;
+  }
+
+  .partners-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .partner-card {
+    min-height: 148px;
+    padding: 22px 18px;
+  }
+
+  .partner-logo {
+    max-height: 54px;
+  }
+
+  .areas-header {
+    margin-bottom: 40px;
+  }
+
+  .areas-grid,
+  .differentials,
+  .process-header,
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+
+  .area-card {
+    padding: 44px 24px;
+  }
+
+  .area-number {
+    font-size: 3.2rem;
+    top: 24px;
+    right: 24px;
+  }
+
+  .area-title {
+    font-size: 1.3rem;
+  }
+
+  .differentials {
+    gap: 40px;
+  }
+
+  .diff-left .section-body {
+    margin-bottom: 36px;
+  }
+
+  .diff-metrics,
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .diff-point {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 24px 0;
+  }
+
+  .process-header {
+    gap: 28px;
+    margin-bottom: 48px;
+  }
+
+  .process-steps {
+    gap: 28px;
+  }
+
+  .process-step {
+    padding: 0;
+  }
+
+  .philosophy {
+    padding: 96px 20px;
+  }
+
+  .philosophy-quote {
+    margin-bottom: 24px;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 56px 20px;
+  }
+
+  .contact-left .section-body {
+    margin-bottom: 32px;
+  }
+
+  .contact-info {
+    margin-top: 32px;
+    padding-top: 32px;
+  }
+
+  .contact-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contact-item-label {
+    width: auto;
+  }
+
+  .form-submit {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  footer {
+    padding: 36px 20px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-oab {
+    text-align: center;
+  }
+
+  @media (min-width: 641px) {
+    nav {
+      padding: 24px 32px;
+      align-items: center;
     }
-    .about { padding: 64px 20px; gap: 40px; }
-    .about-image-wrap { max-width: 300px; }
-    .about-badge { right: -10px; bottom: 18px; padding: 14px 16px; }
-    .about-badge-num { font-size: 1.6rem; }
-    .institutional-panel { padding: 20px 18px; }
-    .institutional-list li { font-size: 0.6rem; padding-left: 18px; }
-    .partners { padding: 64px 20px; }
-    .partners-header { margin-bottom: 34px; }
-    .partners-grid { grid-template-columns: 1fr; gap: 16px; }
-    .partner-card { min-height: 148px; padding: 22px 18px; }
-    .partner-logo { max-height: 54px; }
-    .hero-stat { padding-left: 14px; }
-    .hero-stat-num { font-size: 1.7rem; }
-    .hero-stat-label { font-size: 0.48rem; }
+
+    section {
+      padding: 80px 32px;
+    }
+
+    .hero-left {
+      padding: 122px 32px 44px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.35rem, 6vw, 3.6rem);
+    }
+
+    .hero-trust-list {
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .hero-trust-pill {
+      width: auto;
+      text-align: left;
+    }
+
+    .hero-actions {
+      flex-direction: row;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .hero-right {
+      height: 340px;
+    }
+
+    .hero-portrait-wrap {
+      inset: 40px 76px 144px 60px;
+      border-radius: 24px;
+    }
+
+    .hero-stat-block {
+      left: 32px;
+      right: auto;
+      bottom: 40px;
+      gap: 32px;
+      justify-content: flex-start;
+    }
+
+    .manifesto-band {
+      padding: 48px 32px;
+      gap: 32px;
+    }
+
+    .about {
+      padding: 72px 32px;
+      gap: 52px;
+    }
+
+    .about-image-wrap {
+      max-width: 380px;
+    }
+
+    .institutional-panel {
+      padding: 24px;
+    }
+
+    .partners-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .partner-card {
+      min-height: 168px;
+      padding: 24px 20px;
+    }
+
+    .areas-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .area-card {
+      padding: 48px 32px;
+    }
+
+    .diff-metrics,
+    .process-steps {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-left,
+    .contact-right {
+      padding: 60px 32px;
+    }
+
+    .contact-item {
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .contact-item-label {
+      width: 96px;
+    }
+
+    .form-submit {
+      flex-direction: row;
+      align-items: center;
+      gap: 24px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    nav {
+      padding: 28px 64px;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    .nav-cta {
+      display: inline-block;
+    }
+
+    section {
+      padding: 120px 80px;
+    }
+
+    .brand-mark-shell {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+    }
+
+    .brand-name {
+      font-size: 0.72rem;
+      letter-spacing: 0.26em;
+    }
+
+    .brand-tagline {
+      font-size: 0.48rem;
+      letter-spacing: 0.24em;
+    }
+
+    .hero {
+      min-height: 84vh;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-left {
+      max-width: 680px;
+      padding: 124px 80px 72px 80px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 4vw, 4.35rem);
+      margin-bottom: 24px;
+    }
+
+    .hero-sub {
+      max-width: 500px;
+      margin-bottom: 22px;
+    }
+
+    .hero-actions {
+      gap: 28px;
+    }
+
+    .hero-right {
+      height: auto;
+    }
+
+    .hero-portrait-wrap {
+      inset: 86px 200px 194px 50px;
+      border-radius: 28px;
+    }
+
+    .hero-stat-block {
+      left: 60px;
+      bottom: 80px;
+      gap: 60px;
+    }
+
+    .hero-stat {
+      padding-left: 20px;
+    }
+
+    .hero-stat-num {
+      font-size: 2.4rem;
+    }
+
+    .hero-stat-label {
+      font-size: 0.55rem;
+    }
+
+    .manifesto-band {
+      padding: 56px 80px;
+      flex-direction: row;
+      gap: 80px;
+    }
+
+    .manifesto-divider,
+    .process-steps::before,
+    .philosophy::before {
+      display: block;
+    }
+
+    .manifesto-meta,
+    .manifesto-meta p {
+      text-align: left;
+    }
+
+    .about {
+      padding: 96px 80px;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+    }
+
+    .about-image-wrap {
+      max-width: 420px;
+    }
+
+    .about-badge {
+      right: -18px;
+      bottom: 24px;
+      padding: 16px 20px;
+    }
+
+    .about-badge-num {
+      font-size: 1.9rem;
+    }
+
+    .partners-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .partner-card {
+      min-height: 180px;
+      padding: 26px 24px;
+    }
+
+    .partner-logo {
+      max-height: 64px;
+    }
+
+    .areas-header {
+      margin-bottom: 80px;
+    }
+
+    .areas-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .area-card {
+      padding: 56px 48px;
+    }
+
+    .area-number {
+      font-size: 4rem;
+      top: 32px;
+      right: 32px;
+    }
+
+    .area-title {
+      font-size: 1.5rem;
+    }
+
+    .differentials {
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+    }
+
+    .diff-left .section-body {
+      margin-bottom: 56px;
+    }
+
+    .diff-metrics {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .diff-point {
+      grid-template-columns: 48px 1fr;
+      gap: 24px;
+      padding: 32px 0;
+    }
+
+    .process-header {
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      margin-bottom: 80px;
+    }
+
+    .process-steps {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .process-step {
+      padding: 0 20px;
+    }
+
+    .philosophy {
+      padding: 140px 80px;
+    }
+
+    .philosophy-quote {
+      margin-bottom: 40px;
+    }
+
+    .contact-section {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-left,
+    .contact-right {
+      padding: 100px 80px;
+    }
+
+    .contact-left .section-body {
+      margin-bottom: 56px;
+    }
+
+    .contact-info {
+      margin-top: 48px;
+      padding-top: 48px;
+    }
+
+    .contact-item-label {
+      width: 80px;
+    }
+
+    footer {
+      padding: 48px 80px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    .footer-oab {
+      text-align: right;
+    }
   }
 </style>
 </head>
