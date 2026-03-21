@@ -659,6 +659,81 @@
     flex-shrink: 0;
   }
 
+  /* ── PARTNERS ── */
+  .partners {
+    background: var(--black);
+    border-top: 1px solid rgba(184,150,90,0.08);
+    border-bottom: 1px solid rgba(184,150,90,0.08);
+  }
+
+  .partners-header {
+    max-width: 760px;
+    margin-bottom: 56px;
+  }
+
+  .partners-header .section-body {
+    max-width: 640px;
+  }
+
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .partner-card {
+    min-height: 180px;
+    padding: 26px 24px;
+    border: 1px solid rgba(184,150,90,0.14);
+    background: linear-gradient(160deg, rgba(28,28,28,0.72), rgba(10,10,10,0.9));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 22px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .partner-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(184,150,90,0.3);
+    box-shadow: 0 18px 42px rgba(0,0,0,0.2);
+  }
+
+  .partner-logo-wrap {
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .partner-logo {
+    max-width: 100%;
+    max-height: 64px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(1) brightness(1.08);
+    opacity: 0.92;
+    transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .partner-card:hover .partner-logo {
+    filter: grayscale(0) brightness(1);
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
+  .partner-name {
+    font-family: var(--sans);
+    font-size: 0.58rem;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--silver);
+    text-align: center;
+    line-height: 1.7;
+  }
+
   /* ── AREAS ── */
   .areas {
     background: var(--black);
@@ -1245,6 +1320,7 @@
     .manifesto-divider { display: none; }
 
     .about { padding: 72px 32px; grid-template-columns: 1fr; gap: 52px; }
+    .partners-grid { grid-template-columns: 1fr 1fr; }
     .areas-grid { grid-template-columns: 1fr; }
     .differentials { grid-template-columns: 1fr; gap: 48px; }
     .process-header { grid-template-columns: 1fr; gap: 32px; }
@@ -1283,6 +1359,11 @@
     .about-image-wrap { max-width: 300px; }
     .about-badge { right: -10px; bottom: 18px; padding: 14px 16px; }
     .about-badge-num { font-size: 1.6rem; }
+    .partners { padding: 64px 20px; }
+    .partners-header { margin-bottom: 34px; }
+    .partners-grid { grid-template-columns: 1fr; gap: 16px; }
+    .partner-card { min-height: 148px; padding: 22px 18px; }
+    .partner-logo { max-height: 54px; }
     .hero-stat { padding-left: 14px; }
     .hero-stat-num { font-size: 1.7rem; }
     .hero-stat-label { font-size: 0.48rem; }
@@ -1425,6 +1506,77 @@
       <li>Especialista em ambientes regulatórios de alta complexidade</li>
     </ul>
     <a href="#contato" class="btn-primary">Agendar Consulta Estratégica</a>
+  </div>
+</section>
+
+<!-- ── PARTNERS ── -->
+<section class="partners" id="parceiros">
+  <div class="partners-header reveal">
+    <p class="section-label">Parceiros</p>
+    <h2 class="section-title">
+      Relações construídas com confiança, resultado e visão de longo prazo.
+    </h2>
+    <p class="section-body">
+      Atuamos ao lado de empresas e organizações que valorizam segurança jurídica, inteligência estratégica e relações profissionais sustentadas por credibilidade.
+    </p>
+  </div>
+
+  <div class="partners-grid">
+    <article class="partner-card reveal">
+      <div class="partner-logo-wrap">
+        <img src="parceiros/haydee.png" alt="Haydee" class="partner-logo">
+      </div>
+      <p class="partner-name">Haydee</p>
+    </article>
+
+    <article class="partner-card reveal">
+      <div class="partner-logo-wrap">
+        <img src="parceiros/homemanaus.jpg" alt="Home Manaus" class="partner-logo">
+      </div>
+      <p class="partner-name">Home Manaus</p>
+    </article>
+
+    <article class="partner-card reveal">
+      <div class="partner-logo-wrap">
+        <img src="parceiros/iaçanatur.png" alt="Iaçanatur" class="partner-logo">
+      </div>
+      <p class="partner-name">Iaçanatur</p>
+    </article>
+
+    <article class="partner-card reveal">
+      <div class="partner-logo-wrap">
+        <img src="parceiros/itpec.png" alt="ITPEC" class="partner-logo">
+      </div>
+      <p class="partner-name">ITPEC</p>
+    </article>
+
+    <article class="partner-card reveal">
+      <div class="partner-logo-wrap">
+        <img src="parceiros/kva.png" alt="KVA" class="partner-logo">
+      </div>
+      <p class="partner-name">KVA</p>
+    </article>
+
+    <article class="partner-card reveal">
+      <div class="partner-logo-wrap">
+        <img src="parceiros/lade.png" alt="LADE" class="partner-logo">
+      </div>
+      <p class="partner-name">LADE</p>
+    </article>
+
+    <article class="partner-card reveal">
+      <div class="partner-logo-wrap">
+        <img src="parceiros/onnep.png" alt="ONNEP" class="partner-logo">
+      </div>
+      <p class="partner-name">ONNEP</p>
+    </article>
+
+    <article class="partner-card reveal">
+      <div class="partner-logo-wrap">
+        <img src="parceiros/rosh tecnologia.png" alt="Rosh Tecnologia" class="partner-logo">
+      </div>
+      <p class="partner-name">Rosh Tecnologia</p>
+    </article>
   </div>
 </section>
 
