@@ -1344,6 +1344,81 @@
     color: var(--gold);
   }
 
+  .whatsapp-float {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 950;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 1px solid rgba(184,150,90,0.28);
+    border-radius: 999px;
+    background: rgba(17,17,17,0.92);
+    color: var(--off-white);
+    text-decoration: none;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+    backdrop-filter: blur(12px);
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212,174,114,0.52);
+    background: rgba(28,28,28,0.96);
+  }
+
+  .whatsapp-float:focus-visible {
+    border-radius: 999px;
+  }
+
+  .whatsapp-float-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(145deg, rgba(184,150,90,0.28), rgba(184,150,90,0.12));
+    color: var(--gold-light);
+    flex-shrink: 0;
+  }
+
+  .whatsapp-float-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .whatsapp-float-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .whatsapp-float-label {
+    font-family: var(--sans);
+    font-size: 0.48rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    line-height: 1.4;
+  }
+
+  .whatsapp-float-number {
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--off-white);
+    line-height: 1.4;
+  }
+
   /* ── FOOTER ── */
   footer {
     background: var(--black);
@@ -1791,6 +1866,11 @@
       align-items: center;
       gap: 24px;
     }
+
+    .whatsapp-float {
+      right: 24px;
+      bottom: 24px;
+    }
   }
 
   @media (min-width: 1025px) {
@@ -2028,6 +2108,11 @@
 
     .footer-oab {
       text-align: right;
+    }
+
+    .whatsapp-float {
+      right: 32px;
+      bottom: 32px;
     }
   }
 </style>
@@ -2524,6 +2609,20 @@
     </form>
   </div>
 </section>
+
+<a href="https://wa.me/5592991707089?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Conversar pelo WhatsApp com Jailson Pontes, abre em nova aba">
+  <span class="whatsapp-float-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" focusable="false">
+      <path d="M20 11.5c0 4.7-3.8 8.5-8.5 8.5-1.5 0-2.8-.3-4-.9L4 20l1-3.3c-.9-1.4-1.5-3.2-1.5-5.2C3.5 6.8 7.3 3 12 3s8 3.8 8 8.5z"></path>
+      <path d="M9.4 8.7c.3-.3.7-.2.9.1l.8 1.4c.1.2.1.5-.1.7l-.5.7c.5 1 1.3 1.8 2.3 2.3l.7-.5c.2-.1.5-.2.7-.1l1.4.8c.3.2.4.6.1.9l-.5.8c-.2.3-.5.5-.9.5-3.4-.2-6.2-3-6.4-6.4 0-.3.2-.7.5-.9l1-.3z"></path>
+    </svg>
+  </span>
+  <span class="whatsapp-float-copy">
+    <span class="whatsapp-float-label">WhatsApp</span>
+    <span class="whatsapp-float-number">+55 92 99170-7089</span>
+  </span>
+  <span class="sr-only"> (abre em nova aba)</span>
+</a>
 
 </main>
 
